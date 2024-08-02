@@ -1,4 +1,4 @@
-SwitchyOmega
+SwitchyOmega (v3), forked from SwitchyOmega compatible with manifest v3
 ============
 
 Manage and switch between multiple proxies quickly & easily.
@@ -9,10 +9,10 @@ Chromium Extension
 ------------------
 The project is available as a Chromium Extension.
 
-You can try it on [Chrome Web Store](https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif),
-or grab a packaged extension file (CRX) for offline installation on the [Releases page](https://github.com/FelisCatus/SwitchyOmega/releases).
+You can try it on Chrome Web Store,
+or grab a packaged extension file (CRX) for offline installation on the [Releases page](https://github.com/mrfanii/SwitchyOmega-V3/releases).
 
-Please [report issues on the issue tracker.](https://github.com/FelisCatus/SwitchyOmega/issues)
+Please [report issues on the issue tracker.](https://github.com/mrfanii/SwitchyOmega-V3/issues)
 
 Firefox Addon (Experimental)
 ----------------------------
@@ -29,10 +29,10 @@ Firefox Developer Edition (>= 55) as well, but we strongly advise against doing
 so. It won't work at all in Firefox 54 Stable.
 
 You can try it on [Mozilla Add-ons](https://addons.mozilla.org/en-US/firefox/addon/switchyomega/),
-or grab a packaged extension file (XPI) for offline installation on the [Releases page](https://github.com/FelisCatus/SwitchyOmega/releases).
+or grab a packaged extension file (XPI) for offline installation on the [Releases page](https://github.com/mrfanii/SwitchyOmega-V3/releases).
 
 Please make sure that you are using the latest Nightly build before you
-[report issues](https://github.com/FelisCatus/SwitchyOmega/issues).
+[report issues](https://github.com/mrfanii/SwitchyOmega-V3/issues).
 Build number AND build date should be mentioned somewhere in the issue.
 
 NOTE: PAC Profiles DO NOT work on Firefox due to AMO review policies. We will see what we can do.
@@ -111,7 +111,7 @@ To build the project:
     grunt
     # After building, a folder will be generated:
     cd .. # Return to project root.
-    ls omega-chromium-extension/build/
+    ls omega-target-chromium-extension/build/
     # The folder above can be loaded as an unpacked extension in Chromium now.
 
 To enable `grunt watch`, run `grunt watch` once in the `omega-build` directory.

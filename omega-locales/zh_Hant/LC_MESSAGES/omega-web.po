@@ -108,13 +108,13 @@ msgstr ""
 msgid "condition_alert_fullUrlLimitation"
 msgstr ""
 "自 Chrome 52 起，<code>https://</code>下的完整網址將無法正常匹配。<a "
-"href='https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-%E5%AE%8C%E6%9"
+"href='https://github.com/mrfanii/SwitchyOmega-V3/wiki/Chromium-%E5%AE%8C%E6%9"
 "5%B4%E7%BD%91%E5%9D%80%E9%99%90%E5%88%B6'>更多訊息...</a>"
 
 #, fuzzy
 msgid "condition_alert_fullUrlLimitationLink"
 msgstr ""
-"https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-Limitation"
+"https://github.com/mrfanii/SwitchyOmega-V3/wiki/Chromium-Full-URL-Limitation"
 
 #, fuzzy
 msgid "condition_group_default"
@@ -139,7 +139,7 @@ msgstr "AutoProxy"
 
 #, fuzzy
 msgid "ruleList_usageUrl"
-msgstr "https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage"
+msgstr "https://github.com/mrfanii/SwitchyOmega-V3/wiki/RuleListUsage"
 
 msgid "ruleList_error_resultNotEnabled"
 msgstr "缺少 '@with result' 指令！"

@@ -6,12 +6,7 @@ window.OmegaDebug =
   downloadLog: ->
     blob = new Blob [localStorage['log']], {type: "text/plain;charset=utf-8"}
     filename = "OmegaLog_#{Date.now()}.txt"
-
-    if browser?.downloads?.download?
-      url = URL.createObjectURL(blob)
-      browser.downloads.download({url: url, filename: filename})
-    else
-      saveAs(blob, filename)
+    saveAs(blob, filename)
   resetOptions: ->
     localStorage.clear()
     # Prevent options loading from sync storage after reload.
@@ -19,7 +14,7 @@ window.OmegaDebug =
     chrome.storage.local.clear()
     chrome.runtime.reload()
   reportIssue: ->
-    url = 'https://github.com/FelisCatus/SwitchyOmega/issues/new?title=&body='
+    url = 'https://github.com/mrfanii/SwitchyOmega-V3/issues/new?title=&body='
     finalUrl = url
     try
       projectVersion = OmegaDebug.getProjectVersion()

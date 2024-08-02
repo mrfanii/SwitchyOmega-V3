@@ -45,7 +45,8 @@ drawIcon = (resultColor, profileColor) ->
   return icon if icon
   try
     if not drawContext?
-      drawContext = document.getElementById('canvas-icon').getContext('2d')
+      canvas = new OffscreenCanvas(300, 300)
+      drawContext = canvas.getContext('2d',  { willReadFrequently: true })
 
     icon = {}
     for size in [16, 19, 24, 32, 38]
@@ -183,10 +184,11 @@ proxyImpl = OmegaTargetCurrent.proxy.getProxyImpl(Log)
 state.set({proxyImplFeatures: proxyImpl.features})
 options = new OmegaTargetCurrent.Options(null, storage, state, Log, sync,
   proxyImpl)
+
 options.externalApi = new OmegaTargetCurrent.ExternalApi(options)
 options.externalApi.listen()
 
-if chrome.runtime.id != OmegaTargetCurrent.SwitchySharp.extId
+if chrome.runtime.id != OmegaTargetCurrent.SwitchySharp.extId and false
   options.switchySharp = new OmegaTargetCurrent.SwitchySharp()
   options.switchySharp.monitor()
 
@@ -212,7 +214,7 @@ options._inspect = new OmegaTargetCurrent.Inspect (url, tab) ->
 
     title = chrome.i18n.getMessage('browserAction_titleInspect', urlDisp) + '\n'
     title += action.title
-    chrome.browserAction.setTitle(title: title, tabId: tab.id)
+    chrome.action.setTitle(title: title, tabId: tab.id)
     tabs.setTabBadge(tab, {
       text: '#'
       color: action.resultColor
@@ -320,12 +322,15 @@ encodeError = (obj) ->
 refreshActivePageIfEnabled = ->
   return if localStorage['omega.local.refreshOnProfileChange'] == 'false'
   chrome.tabs.query {active: true, lastFocusedWindow: true}, (tabs) ->
-    url = tabs[0].url
+    url = tabs[0].pendingUrl or tabs[0].url
     return if not url
     return if url.substr(0, 6) == 'chrome'
     return if url.substr(0, 6) == 'about:'
     return if url.substr(0, 4) == 'moz-'
-    chrome.tabs.reload(tabs[0].id, {bypassCache: true})
+    if tabs[0].pendingUrl
+      chrome.tabs.update(tabs[0].id, {url: url})
+    else
+      chrome.tabs.reload(tabs[0].id, {bypassCache: true})
 
 chrome.runtime.onMessage.addListener (request, sender, respond) ->
   return unless request and request.method
@@ -333,6 +338,9 @@ chrome.runtime.onMessage.addListener (request, sender, respond) ->
     if request.method == 'getState'
       target = state
       method = state.get
+    else if request.method == 'setState'
+      target = state
+      method = state.set
     else
       target = options
       method = target[request.method]

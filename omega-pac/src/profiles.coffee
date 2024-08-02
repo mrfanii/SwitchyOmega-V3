@@ -336,7 +336,7 @@ module.exports = exports =
           new U2.AST_Dot property: 'call', expression: new U2.AST_Function(
             argnames: []
             body: [
-              # https://github.com/FelisCatus/SwitchyOmega/issues/390
+              # https://github.com/mrfanii/SwitchyOmega-V3/issues/390
               # 1. Add \n after PAC to terminate line comment in PAC (// ...)
               # 2. Add another \n with knowledge that the first can be escaped
               #    by trailing backslash in PAC. (// ... \)

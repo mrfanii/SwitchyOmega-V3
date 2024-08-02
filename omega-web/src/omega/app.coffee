@@ -30,7 +30,7 @@ angular.module('omega').constant 'isProfileNameReserved', (name) ->
   name.charCodeAt(1) == charCodeUnderscore)
 
 angular.module('omega').config ($stateProvider, $urlRouterProvider,
-  $httpProvider, $animateProvider, $compileProvider) ->
+$httpProvider, $animateProvider, $compileProvider) ->
   $compileProvider.aHrefSanitizationWhitelist(
     /^\s*(https?|ftp|mailto|chrome-extension|moz-extension):/)
   $compileProvider.imgSrcSanitizationWhitelist(
@@ -58,6 +58,9 @@ angular.module('omega').config ($stateProvider, $urlRouterProvider,
       url: '/io'
       templateUrl: 'partials/io.html'
       controller: 'IoCtrl'
+    ).state('theme',
+      url: '/theme'
+      templateUrl: 'partials/theme.html'
     ).state('profile',
       url: '/profile/*name'
       templateUrl: 'partials/profile.html'
@@ -77,7 +80,7 @@ angular.module('omega').factory '$exceptionHandler', ($log) ->
     $log.error(exception, cause)
 
 angular.module('omega').factory 'omegaDebug', ($window, $rootScope,
-  $injector) ->
+$injector) ->
   omegaDebug = $window.OmegaDebug ? {}
 
   omegaDebug.downloadLog ?= ->
@@ -87,7 +90,7 @@ angular.module('omega').factory 'omegaDebug', ($window, $rootScope,
 
   omegaDebug.reportIssue ?= ->
     $window.open(
-      'https://github.com/FelisCatus/SwitchyOmega/issues/new?title=&body=')
+      'https://github.com/mrfanii/SwitchyOmega-V3/issues/new?title=&body=')
     return
 
   omegaDebug.resetOptions ?= ->
@@ -96,14 +99,6 @@ angular.module('omega').factory 'omegaDebug', ($window, $rootScope,
   omegaDebug
 
 angular.module('omega').factory 'downloadFile', ->
-  if browser?.downloads?.download?
-    return (blob, filename) ->
-      url = URL.createObjectURL(blob)
-      if filename
-        browser.downloads.download({url: url, filename: filename})
-      else
-        browser.downloads.download({url: url})
-  else
-    return (blob, filename) ->
-      noAutoBom = true
-      saveAs(blob, filename, noAutoBom)
+  return (blob, filename) ->
+    noAutoBom = true
+    saveAs(blob, filename, noAutoBom)

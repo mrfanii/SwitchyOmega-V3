@@ -136,7 +136,7 @@ msgstr ""
 "Chromium-%E5%AE%8C%E6%95%B4%E7%BD%91%E5%9D%80%E9%99%90%E5%88%B6'>更多訊息...</a>"
 
 msgid "condition_alert_fullUrlLimitationLink"
-msgstr "https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-%E5%AE%8C%E6%95%B4%E7%BD%91%E5%9D%80%E9%99%90%E5%88%B6"
+msgstr "https://github.com/mrfanii/SwitchyOmega-V3/wiki/Chromium-%E5%AE%8C%E6%95%B4%E7%BD%91%E5%9D%80%E9%99%90%E5%88%B6"
 
 msgid "condition_group_default"
 msgstr " "
@@ -157,7 +157,7 @@ msgid "ruleListFormat_AutoProxy"
 msgstr "AutoProxy"
 
 msgid "ruleList_usageUrl"
-msgstr "https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage"
+msgstr "https://github.com/mrfanii/SwitchyOmega-V3/wiki/RuleListUsage"
 
 msgid "ruleList_error_resultNotEnabled"
 msgstr "語法錯誤：缺少 '@with result' 指令！"
@@ -467,7 +467,7 @@ msgstr "顯示原始碼格式相關的說明"
 
 msgid "options_profileEditSourceHelpUrl"
 msgstr ""
-"https://github.com/FelisCatus/SwitchyOmega/wiki/SwitchyOmega-conditions-"
+"https://github.com/mrfanii/SwitchyOmega-V3/wiki/SwitchyOmega-conditions-"
 "format#result-profile"
 
 msgid "options_group_proxyServers"
@@ -1119,18 +1119,18 @@ msgstr "SwitchyOmega 不提供代理伺服器、VPN等網路服務。"
 
 msgid "about_disclaimer_privacy"
 msgstr "SwitchyOmega 不會跟蹤您的上網記錄，不在頁面中插入廣告。請參見我們的"
-"<a href='https://github.com/FelisCatus/SwitchyOmega/wiki/Privacy#%E4%B8%AD%E6%96%87'>隱私政策</a>。"
+"<a href='https://github.com/mrfanii/SwitchyOmega-V3/wiki/Privacy#%E4%B8%AD%E6%96%87'>隱私政策</a>。"
 
 msgid "about_help"
 msgstr ""
-"如有其他問題或者需要說明，請參考<a href='https://github.com/FelisCatus/SwitchyOmega/wiki/"
+"如有其他問題或者需要說明，請參考<a href='https://github.com/mrfanii/SwitchyOmega-V3/wiki/"
 "%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98'>常見問題</a>。"
 
 msgid "about_copyright"
-msgstr "版權所有 2012-2017 <a href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>The SwitchyOmega Authors</a>. 保留所有權利。"
+msgstr "版權所有 2012-2017 <a href='https://github.com/mrfanii/SwitchyOmega-V3/blob/master/AUTHORS'>The SwitchyOmega Authors</a>. 保留所有權利。"
 
 msgid "about_credits"
-msgstr "SwitchyOmega 的誕生離不開 <a href='https://github.com/FelisCatus/SwitchyOmega'>SwitchyOmega</a> 開源項目和其他<a href='https://github.com/FelisCatus/SwitchyOmega/blob/master/AUTHORS'>開源軟體</a>。"
+msgstr "SwitchyOmega 的誕生離不開 <a href='https://github.com/mrfanii/SwitchyOmega-V3'>SwitchyOmega</a> 開源項目和其他<a href='https://github.com/mrfanii/SwitchyOmega-V3/blob/master/AUTHORS'>開源軟體</a>。"
 
 msgid "about_license"
 msgstr "SwitchyOmega 是<a href='https://www.gnu.org/philosophy/free-sw.zh-tw.html'>自由軟體</a>，使用<a href='https://www.gnu.org/licenses/gpl.html'>GNU General Public License</a> 版本 3 及以上授權。"

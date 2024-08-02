@@ -116,7 +116,7 @@ msgstr ""
 
 msgid "condition_alert_fullUrlLimitationLink"
 msgstr ""
-"https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-Limitation"
+"https://github.com/mrfanii/SwitchyOmega-V3/wiki/Chromium-Full-URL-Limitation"
 
 msgid "condition_group_default"
 msgstr " "
@@ -137,7 +137,7 @@ msgid "ruleListFormat_AutoProxy"
 msgstr ""
 
 msgid "ruleList_usageUrl"
-msgstr "https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage"
+msgstr "https://github.com/mrfanii/SwitchyOmega-V3/wiki/RuleListUsage"
 
 msgid "ruleList_error_resultNotEnabled"
 msgstr ""
@@ -444,7 +444,7 @@ msgstr ""
 
 msgid "options_profileEditSourceHelpUrl"
 msgstr ""
-"https://github.com/FelisCatus/SwitchyOmega/wiki/SwitchyOmega-conditions-"
+"https://github.com/mrfanii/SwitchyOmega-V3/wiki/SwitchyOmega-conditions-"
 "format#result-profile"
 
 msgid "options_group_proxyServers"

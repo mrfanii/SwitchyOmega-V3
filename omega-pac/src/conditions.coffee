@@ -279,7 +279,7 @@ module.exports = exports =
       analyze: (condition) ->
         parts = for pattern in condition.pattern.split('|') when pattern
           # Get the magical regex of this pattern. See
-          # https://github.com/FelisCatus/SwitchyOmega/wiki/Host-wildcard-condition
+          # https://github.com/mrfanii/SwitchyOmega-V3/wiki/Host-wildcard-condition
           # for the magic.
           if pattern.charCodeAt(0) == '.'.charCodeAt(0)
             pattern = '*' + pattern

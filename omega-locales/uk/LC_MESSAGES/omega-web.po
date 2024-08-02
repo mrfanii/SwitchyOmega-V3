@@ -168,7 +168,7 @@ msgstr ""
 
 msgid "condition_alert_fullUrlLimitationLink"
 msgstr ""
-"https://github.com/FelisCatus/SwitchyOmega/wiki/Chromium-Full-URL-Limitation"
+"https://github.com/mrfanii/SwitchyOmega-V3/wiki/Chromium-Full-URL-Limitation"
 
 #, fuzzy
 msgid "condition_group_default"
@@ -192,7 +192,7 @@ msgid "ruleListFormat_AutoProxy"
 msgstr "Авто проксі"
 
 msgid "ruleList_usageUrl"
-msgstr "https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage"
+msgstr "https://github.com/mrfanii/SwitchyOmega-V3/wiki/RuleListUsage"
 
 msgid "ruleList_error_resultNotEnabled"
 msgstr "Не вистачає директиви '@with result'!"
@@ -584,7 +584,7 @@ msgstr "Показати довідку про формат вихідного �
 
 msgid "options_profileEditSourceHelpUrl"
 msgstr ""
-"https://github.com/FelisCatus/SwitchyOmega/wiki/SwitchyOmega-conditions-"
+"https://github.com/mrfanii/SwitchyOmega-V3/wiki/SwitchyOmega-conditions-"
 "format#result-profile"
 
 msgid "options_group_proxyServers"
@@ -1438,13 +1438,13 @@ msgstr ""
 msgid "about_help"
 msgstr ""
 "Інші питання? Потрібна допомога з використанням SwitchyOmega? Будь ласка, "
-"дивіться наш <ahref='https://github.com/FelisCatus/SwitchyOmega/wiki/"
+"дивіться наш <ahref='https://github.com/mrfanii/SwitchyOmega-V3/wiki/"
 "FAQ'>FAQ</a>."
 
 #, fuzzy
 msgid "about_copyright"
 msgstr ""
-"Авторське право 2012-2017 <ahref='https://github.com/FelisCatus/SwitchyOmega/"
+"Авторське право 2012-2017 <ahref='https://github.com/mrfanii/SwitchyOmega-V3/"
 "blob/master/AUTHORS'>Автори SwitchyOmega</a>. Всі права захищені."
 
 #, fuzzy
@@ -1452,7 +1452,7 @@ msgid "about_credits"
 msgstr ""
 "SwitchyOmega стала можливою завдяки проекту <ahref='https://github.com/"
 "FelisCatus/SwitchyOmega'>SwitchyOmega</a>з відкритим вихідним кодом і іншому "
-"<ahref='https://github.com/FelisCatus/SwitchyOmega /blob /master /"
+"<ahref='https://github.com/mrfanii/SwitchyOmega-V3 /blob /master /"
 "AUTHORS'>програмного забезпечення з відкритим вихідним кодом</a>."
 
 #, fuzzy

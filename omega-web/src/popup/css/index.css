@@ -17,10 +17,15 @@ html, body {
 
 body {
   min-width: 12em;
+  padding: 5px 0;
 }
 
 .om-hidden {
   display: none !important;
+}
+
+#js-system{
+  color: #000;
 }
 
 /* Menu */
@@ -28,7 +33,7 @@ body {
 .om-nav {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 5px;
 }
 
   .om-nav-item {

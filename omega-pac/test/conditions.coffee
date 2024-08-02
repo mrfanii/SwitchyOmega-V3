@@ -112,10 +112,10 @@ describe 'Conditions', ->
     it 'should match requests based on wildcard pattern', ->
       testCond(cond, 'http://www.example.com/', 'match')
     it 'should also match hostname without the optional level', ->
-      # https://github.com/FelisCatus/SwitchyOmega/wiki/Host-wildcard-condition
+      # https://github.com/mrfanii/SwitchyOmega-V3/wiki/Host-wildcard-condition
       testCond(cond, 'http://example.com/', 'match')
     it 'should process patterns like *.*example.com correctly', ->
-      # https://github.com/FelisCatus/SwitchyOmega/issues/158
+      # https://github.com/mrfanii/SwitchyOmega-V3/issues/158
       con =
         conditionType: 'HostWildcardCondition'
         pattern: '*.*example.com'
