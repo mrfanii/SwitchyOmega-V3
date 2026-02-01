@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Proxy SwitchyOmega (V3)",
-  "version": "3.0.0",
+  "version": "3.0.4",
   "description": "__MSG_manifest_app_description__",
   "icons": {
     "16": "img/icons/omega-action-16.png",
